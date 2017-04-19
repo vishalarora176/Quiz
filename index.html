@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="QuizApp">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Quiz</title>
+  <script src="libs/angular.min.js" charset="utf-8"></script>
+  <script src="libs/jquery.min.js" charset="utf-8"></script>
+  <script src="app.js" charset="utf-8"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div id="container" ng-controller="QuizController as ctrl">
+    <h5>Question {{ctrl.counter}} of {{ctrl.totalCount}}</h5>
+    <p>{{ ctrl.currentQuestion.text }}</p>
+    <div>
+      <ol type="A">
+        <li ng-repeat="option in ctrl.currentQuestion.options">{{option}}</li>
+      </ol>
+    </div>
+    <div id="answersButtonContainer">
+      <div class="button" ng-click="ctrl.checkAnswer($event, 0);">A</div>
+      <div class="button" ng-click="ctrl.checkAnswer($event, 1);">B</div>
+      <div class="button" ng-click="ctrl.checkAnswer($event, 2);">C</div>
+      <div class="button" ng-click="ctrl.checkAnswer($event, 3);">D</div>
+    </div>
+    <br>
+    <div id="navigationContainer" ng-if="ctrl.showNextBtn">
+      <div id="status">{{ ctrl.status }}</div>
+      <div class="button" ng-click="ctrl.getNextQuestion()">></div>
+    </div>
+  </div>
+
+</body>
+</html>

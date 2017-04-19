@@ -1,0 +1,51 @@
+body {
+  background: #000000;
+}
+
+#container {
+  height: 350px;
+  width: 40%;
+  border: 20px solid IndianRed;
+  margin: auto;
+  margin-top: 50px;
+  background: #20B2AA;
+  color: white;
+  padding: 10px 20px;
+  font-size: 20px;
+}
+
+div#answersButtonContainer, div#navigationContainer {
+  width: auto;
+  margin: auto;
+  text-align: center;
+  position: relative;
+}
+
+div#hint {
+  font-size: 20px;
+  margin: 0 0 5px 0;
+}
+
+div.button {
+  border : 1px solid white;
+  height : 100%;
+  width : 80px;
+  display: inline-block;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+}
+
+div.button:hover {
+  cursor: pointer;
+  background-color: white;
+  color: #20B2AA;
+}
+
+.correctAns {
+  background: green;
+}
+
+.wrongAns {
+  background: red;
+}
